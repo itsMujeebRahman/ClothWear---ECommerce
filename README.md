@@ -34,3 +34,22 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+Tchnology Used -
+ 
+Next Js for forntend
+Tailwind CSS for Styling
+Sanity as CMS and for Storing Data
+Clerk for user Authentication
+Stripe for payment and checkout
+
+
+Fatures Added-
+
+Product Grid Display
+Product Search Option
+Adaptable for Mobile View 
+Cart and Checkout
+Order List
+Gender and Cloth Category
+
