@@ -1,30 +1,29 @@
-// export const dynamic = "force-dynamic";
 "use client";
 
-// import useCartStore from "@/Store";
-// import { useSearchParams, useRouter } from "next/navigation";
-// import { useEffect } from "react";
-// import { motion } from "motion/react";
-// import { Check, Package, ShoppingBag, Home } from "lucide-react";
-// import Link from "next/link";
+import useCartStore from "@/Store";
+import { useSearchParams, useRouter } from "next/navigation";
+import { useEffect } from "react";
+import { motion } from "motion/react";
+import { Check, Package, ShoppingBag, Home } from "lucide-react";
+import Link from "next/link";
 
-const SuccessPage = () => {
-  // const searchParams = useSearchParams();
-  // const orderNumber = searchParams.get("orderNumber");
-  // const sessionId = searchParams.get("session_id");
-  // const { resetCart } = useCartStore();
-  // const router = useRouter();
+export const SuccessPage = () => {
+  const searchParams = useSearchParams();
+  const orderNumber = searchParams.get("orderNumber");
+  const sessionId = searchParams.get("session_id");
+  const { resetCart } = useCartStore();
+  const router = useRouter();
 
-  // useEffect(() => {
-  //   if (!orderNumber && !sessionId) {
-  //     router.push("/");
-  //   } else {
-  //     resetCart();
-  //   }
-  // }, [orderNumber, sessionId, resetCart]);
+  useEffect(() => {
+    if (!orderNumber && !sessionId) {
+      router.push("/");
+    } else {
+      resetCart();
+    }
+  }, [orderNumber, sessionId, resetCart]);
   return (
     <div className="py-10 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center p-4">
-{/*       <motion.div
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -63,7 +62,7 @@ const SuccessPage = () => {
           </ul>
         </div>
         {/* order Tracker */}
-{/*         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <Link
             href={"/"}
             className="flex items-center justify-center px-4 py-3 font-semibold bg-black
@@ -89,7 +88,7 @@ const SuccessPage = () => {
             <ShoppingBag className="w-5 h-5 mr-2" /> Shop
           </Link>
         </div>
-      </motion.div> */} */}
+      </motion.div>
     </div>
   );
 };
