@@ -24,10 +24,10 @@ const CategoryProducts = ({ categories, slug }: Props) => {
       const query = `*[_type =='product' && references(*[_type == 'category' && 
         slug.current == $categorySlug]._id)] | order(name asc)`;
       const data = await client.fetch(query, { categorySlug });
-      setProducts(data)
+      setProducts(data);
     } catch (error) {
       console.error("Error Fetching the Products", error);
-      setProducts([])
+      setProducts([]);
     } finally {
       setLoading(false);
     }
@@ -71,8 +71,7 @@ const CategoryProducts = ({ categories, slug }: Props) => {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                   >
-                    <ProductCard key={product?._id}  product={product} />
-                   
+                    <ProductCard key={product?._id} product={product} />
                   </motion.div>
                 </AnimatePresence>
               ))}

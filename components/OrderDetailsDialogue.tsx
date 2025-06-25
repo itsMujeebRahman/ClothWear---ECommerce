@@ -108,7 +108,7 @@ const OrderDetailsDialogue: FC<Props> = ({ order, isOpen, onClose }) => {
         <div className="mt-4 text-right flex items-center justify-end">
           <div className="w-44 flex flex-col gap-1">
             
-            {order?.amountDiscount !== 0 && (
+            {order?.amountDiscount === 0 && (
               <div className="flex items-center justify-between w-full">
                 <strong>SubTotal </strong>
                 <PriceFormatter
@@ -120,7 +120,7 @@ const OrderDetailsDialogue: FC<Props> = ({ order, isOpen, onClose }) => {
               </div>
             )}
 
-            {order?.amountDiscount! == 0 && (
+            {order?.amountDiscount === 0 && (
               <div className="flex items-center justify-between w-full">
                 <strong>Discount</strong>
                 <PriceFormatter amount={order?.amountDiscount} />
