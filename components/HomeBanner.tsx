@@ -57,7 +57,7 @@ const HomeBanner = () => {
       </Title>
       <p className="text-sm text-center text-gray-500/80 font-medium max-w-[480px] hover:text-gray-600">
         Find everything you need to look and feel your best, and shop the latest
-        men's fashion and lifestyle products
+        men&aposs fashion and lifestyle products
       </p>
     </div>
   );
