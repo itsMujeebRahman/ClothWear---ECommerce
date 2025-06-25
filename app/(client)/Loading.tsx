@@ -9,4 +9,4 @@ const loading = () =>{
     )
 }
 
-export default Loading;
+export default loading;
