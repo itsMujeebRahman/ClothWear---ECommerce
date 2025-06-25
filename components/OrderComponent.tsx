@@ -3,10 +3,8 @@
 import { MY_ORDERS_QUERYResult } from "@/sanity.types";
 import { useState } from "react";
 import { TableBody, TableCell, TableRow } from "./ui/table";
-import { Tooltip, TooltipProvider, TooltipTrigger } from "./ui/tooltip";
 import PriceFormatter from "./PriceFormatter";
 import { format } from "date-fns";
-import { TooltipContent } from "@radix-ui/react-tooltip";
 import OrderDetailsDialogue from "./OrderDetailsDialogue";
 
 const OrderComponent = ({ orders }: { orders: MY_ORDERS_QUERYResult }) => {
